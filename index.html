@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Students Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Best Students Information Form</h1>
+        <p class="form-description">Please fill out the following form to provide information about the best students. Your input will help us recognize and reward outstanding students.</p>
+        <form id="studentForm">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="123-456-7890" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="123 Main St, City, Country" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>Preferred Contact Method:</label>
+                <label for="contactEmail"><input type="radio" id="contactEmail" name="contactMethod" value="email" required> Email</label>
+                <label for="contactPhone"><input type="radio" id="contactPhone" name="contactMethod" value="phone"> Phone</label>
+
+                <label>Interests:</label>
+                <label for="interestSports"><input type="checkbox" id="interestSports" name="interests" value="sports"> Sports</label>
+                <label for="interestArts"><input type="checkbox" id="interestArts" name="interests" value="arts"> Arts</label>
+                <label for="interestScience"><input type="checkbox" id="interestScience" name="interests" value="science"> Science</label>
+                <label for="interestTechnology"><input type="checkbox" id="interestTechnology" name="interests" value="technology"> Technology</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Information</legend>
+                <label for="schoolName">School/College Name:</label>
+                <input type="text" id="schoolName" name="schoolName" placeholder="XYZ High School" required>
+
+                <label for="grade">Grade/Year:</label>
+                <input type="text" id="grade" name="grade" placeholder="10th Grade" required>
+
+                <label for="major">Major/Field of Study:</label>
+                <input type="text" id="major" name="major" placeholder="Science" required>
+
+                <label for="gpa">GPA/Grades:</label>
+                <input type="text" id="gpa" name="gpa" placeholder="3.8/4.0" required>
+
+                <label for="favoriteSubjects">Favorite Subjects:</label>
+                <input type="text" id="favoriteSubjects" name="favoriteSubjects" placeholder="Mathematics, Physics" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extracurricular Activities</legend>
+                <label for="clubs">Clubs/Societies:</label>
+                <textarea id="clubs" name="clubs" placeholder="Science Club, Debate Team" required></textarea>
+
+                <label for="sports">Sports:</label>
+                <textarea id="sports" name="sports" placeholder="Basketball, Soccer" required></textarea>
+
+                <label for="arts">Arts/Music:</label>
+                <textarea id="arts" name="arts" placeholder="Painting, Piano" required></textarea>
+
+                <label for="leadership">Leadership Roles:</label>
+                <textarea id="leadership" name="leadership" placeholder="Class President, Team Captain" required></textarea>
+
+                <label for="volunteer">Volunteer Work:</label>
+                <textarea id="volunteer" name="volunteer" placeholder="Community Service, Tutoring" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Achievements and Awards</legend>
+                <label for="academicAwards">Academic Awards:</label>
+                <textarea id="academicAwards" name="academicAwards" placeholder="National Merit Scholar, Math Olympiad Winner" required></textarea>
+
+                <label for="sportsAwards">Sports Awards:</label>
+                <textarea id="sportsAwards" name="sportsAwards" placeholder="MVP, Regional Champion" required></textarea>
+
+                <label for="otherAwards">Other Recognitions:</label>
+                <textarea id="otherAwards" name="otherAwards" placeholder="Art Exhibitions, Music Competitions" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Future Aspirations</legend>
+                <label for="careerGoals">Career Goals:</label>
+                <textarea id="careerGoals" name="careerGoals" placeholder="Become a doctor, Start a tech company" required></textarea>
+
+                <label for="educationPlans">Higher Education Plans:</label>
+                <textarea id="educationPlans" name="educationPlans" placeholder="Attend MIT, Study abroad" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>References</legend>
+                <label for="referenceName">Reference Name:</label>
+                <input type="text" id="referenceName" name="referenceName" placeholder="Jane Smith" required>
+
+                <label for="referenceRelationship">Relationship to Reference:</label>
+                <input type="text" id="referenceRelationship" name="referenceRelationship" placeholder="Teacher, Coach" required>
+
+                <label for="referenceContact">Contact Information of Reference:</label>
+                <input type="text" id="referenceContact" name="referenceContact" placeholder="jane.smith@example.com, 123-456-7890" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="reason">Why do you consider yourself or the nominee the best student?</label>
+                <textarea id="reason" name="reason" placeholder="Explain your reasons here" required></textarea>
+
+                <label for="additionalComments">Any additional comments or information:</label>
+                <textarea id="additionalComments" name="additionalComments" placeholder="Provide any additional information here"></textarea>
+            </fieldset>
+
+            <button type="submit" onclick="saveAsPDF()">Submit</button>
+        </form>
+    </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
